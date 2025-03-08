@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{/*Variables CSS */
+    --color-primario:#1FDE96;
+    --color-secundario:#074799;
+    --color-terciario:#A963E0;
+    --color-cuaternario:#FF6868;
+    --color-hoverprimario:#1D7AE0;
+    --color-hoversecundario:#789DBC;
+    --color-hoverterciario:#441752;
+    --fuente-montserrat:'Montserrat', sans-serif;
+    --fuente-Krona:"Krona One", serif;
+    /*Cambiar los colores en el url https://colorhunt.co/palette/c599b6e6b2bafad0c4fff7f3 */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Se utiliza var para poder utlizar las variables CSS*/
+body{
+    /*height: 100vh; se elimina porque no permite que el contenido se ajuste a la pantalla */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box; /*mantiene el borde o ancho real*/
+    
+}
+
+.header{
+    padding: 2% 0% 0% 15%; /*El porcentaje del 10 % en padding es el mismo que pusumos en el padding de presentacion*/
+
+}
+
+.header__menu{
+
+    display: flex;
+    gap: 80px;
+}
+
+
+.header__menu__link{
+    padding: 10px 15px;;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /*Son 24 px*/
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none; /*Quita el subrayado de la pestaña Home y Sobre mi */
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 5% 15%;
+    justify-content: space-between;
+    gap: 82px; /*Crear un espacio entre los parrafos y la imagen*/
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.2rem; /*35px*/
+    font-family: var(--fuente-Krona);
+}
+
+.titulo-destacado{
+    color: var(--color-cuaternario);
+}
+
+
+.presentacion__contenido__texto{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /*24px*/
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlace__subtitulos{
+    font-family: var(--fuente-Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hoverprimario);
+    cursor: pointer;  /* el cursos para a tener forma de mano*/
+}
+
+.presentacion__enlace__subtitulos:hover{
+    background-color: var(--color-hoversecundario);
+}
+
+.presentacion__imagen{
+    width: 50%; /*width es el ancho de la imagen y 50% es la unidad de medida que utilizamos para determinar el tamaño*/
+}
+
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px; /* Define la distancia entre el contenido y sus bordes*/
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat); /* Fuente de la letra*/
+    font-size: 1.5rem;  /* Tamaño de la letra*/
+    font-weight: 400;
+    display: flow-root;
+}
+
+.footer:hover{
+    background-color: var(--color-hoverterciario);
+}
+
+.presentacion__contenido__texto a{
+    text-decoration: none;
+    color: var(--color-terciario);
+}
+
+@media (max-width: 1200px){ /*Para adaptar a las pantallas de ceculares, tablet etc*/
+   
+    .header__menu{
+        justify-content: center; /*Sirve para centralizar el elemento de header menu*/
+    }
+
+
+    .header{
+        padding: 10%;
+    }
+   
+    .presentacion{
+        flex-direction: column-reverse; /*Imagen aparece encima del texto*/
+        padding: 5% ;/*darle el espacio entre el texto y foto con el borde*/
+
+    }
+
+
+    .prensentacion__contenido{
+        width: auto; /*establece que el ancho de un elemento será el que considere más apropiado el navegador, dependiendo de su contenido*/
+
+}
